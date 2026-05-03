@@ -1,56 +1,99 @@
-# Network Knowledge Management System
+# 🏦 Sistema de Gestión del Conocimiento - Banco Tecnológico
 
-## 📚 Sistema de Gestión del Conocimiento de Red
+## 📋 Propósito
 
-Este repositorio contiene la documentación técnica, scripts de automatización y guías de troubleshooting para el equipo de ingeniería de red.
+Este repositorio implementa un sistema básico de gestión del conocimiento (KM) para transformar el conocimiento tácito del equipo de TI en conocimiento explícito, documentado y transferible. En el contexto bancario, donde una caída de servicio impacta directamente la operación y confianza de los clientes, contar con un KM robusto es una medida de **resiliencia organizacional**.
 
-## 🗂️ Estructura del Repositorio
+## 🎯 Objetivos
+
+- Eliminar la dependencia operativa de una sola persona
+- Documentar configuraciones críticas y procedimientos
+- Reducir el tiempo medio de respuesta (MTTR) ante incidentes
+- Establecer trazabilidad y control de versiones
+- Facilitar la capacitación cruzada y onboarding
+
+## 📁 Estructura del Repositorio
 
 ```
-├── .github/             # Plantillas para Issues y Pull Requests
-├── docs/                # Cuerpo principal de la Wiki
-│   ├── infrastructure/  # Diagramas y topologías
-│   ├── procedures/      # Manuales paso a paso (SOPs)
-│   └── troubleshooting/ # Guías de resolución de fallos
-├── scripts/             # Automatización (Python, Bash, Ansible)
-│   ├── backup/
-│   └── monitoring/
-└── README.md            # Índice principal y guía de contribución
+km-banco-tecnologico/
+├── docs/
+│   ├── procedimientos/      # Procedimientos críticos de red
+│   ├── scripts/             # Scripts de automatización
+│   └── troubleshooting/     # Guías de diagnóstico
+├── wiki/                    # Wiki interna
+│   ├── Home.md
+│   ├── Glosario.md
+│   └── Contactos-y-Escalamiento.md
+├── incidentes/              # Bitácora de incidentes
+│   ├── INC-001-caida-mpls.md
+│   └── INC-002-saturacion-firewall.md
+└── README.md                # Este archivo
 ```
 
-## 📖 Documentación Disponible
+## 🚀 Procedimientos Documentados
 
-### Procedimientos de Red (`/docs/procedures/`)
-- **Configuración de VLANs**: Segmentación de tráfico para nuevos departamentos
-- **Actualización de Firmware**: Protocolo de seguridad para parches en Switches y Firewalls
-- **Gestión de VPN**: Procedimiento para accesos remotos seguros
+| Procedimiento | Descripción | Ubicación |
+|--------------|-------------|-----------|
+| Configuración Router Core | Puesta en marcha del equipo crítico | `docs/procedimientos/configuracion-router-core.md` |
+| Respaldo de Configuraciones | Política diaria y manual de backups | `docs/procedimientos/respaldo-configuraciones.md` |
+| Gestión de VLANs | Inventario y procedimiento de creación | `docs/procedimientos/gestion-vlans.md` |
 
-### Scripts de Automatización (`/scripts/`)
-- **Backup**: Scripts para respaldo de configuraciones
-- **Monitoring**: Herramientas de monitoreo de red
+## 🛠️ Scripts de Automatización
 
-### Troubleshooting (`/docs/troubleshooting/`)
-- Fallos de enlace WAN
-- Problemas de latencia
-- Diagnóstico de conectividad
+| Script | Lenguaje | Propósito |
+|--------|----------|-----------|
+| `backup_configs.sh` | Bash | Respaldo automático vía SSH |
+| `monitor_enlaces.py` | Python | Monitoreo de latencia y pérdida |
 
-## 🚀 Flujo de Trabajo
+## 📖 Wiki Interna
 
-1. **Crear una Issue** para proponer nuevo contenido
-2. **Desarrollar en rama** propia
-3. **Enviar Pull Request** para revisión
-4. **Aprobación** por otro miembro del equipo
-5. **Merge** a la rama principal
+La carpeta `/wiki` contiene:
 
-## 🛠️ Contribución
+- **Home.md**: Punto de entrada y guía de onboarding
+- **Glosario.md**: Términos técnicos del repositorio
+- **Contactos-y-Escalamiento.md**: Matriz de escalamiento por niveles
 
-Todo nuevo procedimiento debe ser revisado antes de integrarse a la "verdad oficial" del repositorio.
+## 📊 Incidentes Documentados
 
-### Estándares de Documentación
-- Usar Markdown con bloques de código con resaltado de sintaxis
-- Incluir diagramas Mermaid cuando sea necesario
-- Los scripts deben incluir encabezado con: Autor, Propósito, Dependencias y Ejemplo de Uso
+| Incidente | Descripción | Lecciones Aprendidas |
+|-----------|-------------|---------------------|
+| INC-001 | Caída de enlace MPLS - Sucursal Mixco | Activación de respaldo 4G LTE |
+| INC-002 | Saturación firewall perimetral | DDoS de baja intensidad |
 
-## 📄 Licencia
+## 🔧 Convenciones del Repositorio
 
-Documentación interna para uso del equipo de ingeniería.
+### Control de Versiones
+- Cada commit debe incluir mensaje descriptivo
+- Usar Pull Requests para cambios en documentación crítica
+- Revisión por pares obligatoria antes de merge
+
+### Formato Markdown
+- Usar bloques de código con resaltado de sintaxis
+- Incluir diagramas Mermaid cuando aplique
+- Seguir estructura SOP en procedimientos
+
+### Nomenclatura de Archivos
+- Minúsculas con guiones: `nombre-archivo.md`
+- Prefijo INC- para incidentes: `INC-001-descripcion.md`
+- Fechas en formato ISO: `YYYY-MM-DD`
+
+## 👥 Flujo de Trabajo
+
+1. **Crear/Actualizar** documentación en rama feature
+2. **Pull Request** con descripción del cambio
+3. **Revisión** por otro miembro del equipo
+4. **Merge** a main después de aprobación
+5. **Notificar** al equipo sobre cambios críticos
+
+## 📈 Beneficios Alcanzados
+
+✅ Disponibilidad permanente del conocimiento 24/7  
+✅ Reducción del MTTR en escenarios documentados  
+✅ Trazabilidad total mediante historial de Git  
+✅ Cultura de mejora continua  
+✅ Disminución del riesgo por rotación de personal  
+
+---
+
+**🏦 Banco Tecnológico - Departamento de TI**  
+*Documentación versionada y bajo control de cambios*
