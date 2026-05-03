@@ -1,76 +1,10 @@
-```markdown
-# Environment and configuration files
-.env
-.env.local
-.env.*
+(docs/scripts/monitor_enlaces.py being a Python script in a docs folder suggests it might be an executable script rather than pure documentation, but given the context of network configuration documentation, it's likely a legitimate script for the documentation system and shouldn't be ignored)
 
-# Logs
-*.log
+Looking at the file changes:
+- Added: Documentation files (.md), scripts (.sh, .py), incident reports
+- Deleted: Template files, documentation files, scripts
+- Modified: README
 
-# Temporary files
-*.tmp
+All added/deleted/modified files are either documentation (Markdown files), legitimate scripts that appear to be part of the documentation system, or template/config files. No build artifacts, compiled files, dependency directories, or temporary files are present in the changes.
 
-# Editor/IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Dependencies
-node_modules/
-.venv/
-venv/
-__pycache__/
-*.egg-info/
-dist/
-build/
-target/
-.gradle/
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Python specific
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg
-
-# Backup and example files
-*~
-*.bak
-*.orig
-*.patch
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-```
+(empty)
